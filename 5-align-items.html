@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align items </title>
+
+    <style>
+        .container{
+            max-width: 350px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: purple;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1; /*Trata da distribuição de tamanho
+            entre os itens*/
+        }
+        
+        .flex{
+            flex: 1;
+        }
+
+        .center{
+            align-items: center;
+        }
+        /*faz com que os itens crescam de acordo com 
+        o maior item, relacionado a altura*/
+        .stretch{
+            align-items: stretch;
+        }
+        .start{
+            align-items: flex-start;
+        }
+        .end{
+            align-items: flex-end;
+        }
+        /*usa alinha de orientação pro texto*/
+        .baseline{
+            align-items: baseline;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 500px;
+            justify-content: center;
+        }
+        .central .item{
+            /*remove algumas propriedade relacionadas
+            ao flex-itens, so para alinha 1 item*/
+            flex: 0;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Row</h1>
+    <p>Align - center</p>
+    <section class="container flex center">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best</div>
+        <div class="item">Item 3 alguma coisa ahah uiuiui</div>
+    </section>
+
+    <p>Align - stretch</p>
+    <section class="container stretch">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <p>Align - start</p>
+    <section class="container start">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <p>Align - end</p>
+    <section class="container end">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <p>Align - baseline</p>
+    <section class="container baseline">
+        <div class="item"><br>Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3 fuck fuck fuck fuck fuck fuck</div>
+    </section>
+
+    <h1>Column</h1>
+
+    <p>Align - start</p>
+    <section class="container start column">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3</div>
+    </section>
+
+    <p>Align - end</p>
+    <section class="container end column">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3 fuck fuck fuck fuck</div>
+    </section>
+
+    <p>Align - center</p>
+    <section class="container flex center column">
+        <div class="item">Item 1</div>
+        <div class="item">You are the best</div>
+        <div class="item">Item 3 alguma coisa ahah uiuiui</div>
+    </section>
+
+    <p>Align - baseline</p>
+    <section class="container baseline column">
+        <div class="item"><br>Item 1</div>
+        <div class="item">You are the best on this cheat jesus christ fuck bru</div>
+        <div class="item">Item 3 fuck fuck fuck fuck fuck fuck</div>
+    </section>
+
+    <p>Alinahmento central à tela</p>
+    <section class="container central center">
+        <div class="item">Trata do elemento dos flex itens de acordo com o eixo do container.
+            O alinhamento é diferente para quando os itens estão em colunas ou linhas.
+            Permite o alinhamento central no eixo vertical.</div>
+    </section>
+</body>
+</html>

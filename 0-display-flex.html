@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - display flex</title>
+    <style>
+        .flex{
+            max-width: 300px;
+            padding: 10px;
+            border: 2px solid black;
+            display: flex; /*cada item do container
+            ira ocupar o maximo de conteudo e vai 
+            se abrigar dentro do container respeitando
+            a orientação em linha*/
+        }
+        /*classe aplicada aos filhos do container*/
+        .item{
+            background-color: aqua;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!--criar elementos já com a classe item
+    aplicando a classe flex consolida todos 
+    os elementos-->
+    <div class="flex">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+    </div>
+</body>
+</html>
